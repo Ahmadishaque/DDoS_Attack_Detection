@@ -79,26 +79,116 @@ The project utilizes the CICIDS2017 dataset, which contains:
 - Ensemble method exploration
 - Integration with SDN environments
 
-## Requirements
-- Python 3.8+
-- TensorFlow 2.x
-- scikit-learn
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
+## Repository Structure
+```
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── docs/
+│   ├── Peer_Review_Feedback_Report.pdf
+│   ├── Team_Assigned_Tasks.pdf
+│   ├── Team_Paper_Presentation.pdf
+│   └── Team_Charter.pdf
+│
+├── data/
+│   ├── Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+│   └── Wednesday-workingHours.pcap_ISCX.csv
+│
+└── notebooks/
+    ├── preprocessing/
+    │   └── preprocessing.ipynb
+    │
+    └── models/
+        ├── ann.ipynb
+        ├── cnn.ipynb
+        ├── decision_tree.ipynb
+        ├── knn.ipynb
+        ├── logistic_regression.ipynb
+        ├── naive_bayes.ipynb
+        ├── random_forest.ipynb
+        └── svm.ipynb
+
+```
+
+### Directory Description
+
+- `docs/`: Project documentation and reports
+- `data/`: Dataset files used for training and testing
+  - Note: Large CSV files should be added to .gitignore and documented how to obtain them
+- `notebooks/`: Jupyter notebooks organized by function
+  - `preprocessing/`: Data preparation and feature engineering
+  - `models/`: Individual model implementations
+
+### Additional Files
+- `requirements.txt`: Python dependencies
+- `LICENSE`: MIT License
+- `.gitignore`: Specifies which files Git should ignore
+- `README.md`: Project documentation (this file)
 
 ## Setup and Installation
+
+### Prerequisites
+- Python 3.8+
+- Jupyter Notebook or Google Colab
+- Required Python packages:
+  - tensorflow>=2.0.0
+  - scikit-learn>=0.24.0
+  - pandas>=1.2.0
+  - numpy>=1.19.0
+  - matplotlib>=3.3.0
+  - seaborn>=0.11.0
+
+### Installation Steps
+1. Clone the repository
 ```bash
-# Clone the repository
 git clone https://github.com/yourusername/ddos-detection-framework.git
-
-# Install required packages
-pip install -r requirements.txt
-
-# Run the main script
-python main.py
+cd ddos-detection-framework
 ```
+
+2. Create and activate a virtual environment (recommended)
+```bash
+python -m venv venv
+# On Windows
+venv\Scripts\activate
+# On Unix or MacOS
+source venv/bin/activate
+```
+
+3. Install required packages
+```bash
+pip install -r requirements.txt
+```
+
+### Dataset Setup
+1. The project uses two files from the CICIDS2017 dataset:
+   - Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+   - Wednesday-workingHours.pcap_ISCX.csv
+
+2. Place these files in the `Data` directory
+
+### Running the Models
+You can run the notebooks in either Google Colab (recommended) or locally:
+
+#### Using Google Colab
+1. Upload the notebooks from `Team Colab Notebooks` to Google Colab
+2. Upload the dataset files to your Google Drive
+3. Mount your Google Drive in the notebooks
+4. Run the notebooks
+
+#### Running Locally
+1. Start Jupyter Notebook server
+```bash
+jupyter notebook
+```
+2. Navigate to `Team Colab Notebooks` directory
+3. Open and run the desired notebook:
+   - `preprocessing.ipynb` for data preparation
+   - Individual model notebooks (ann.ipynb, cnn.ipynb, etc.) for specific implementations
+   - `ROC Curve analysis.ipynb` for performance comparison
+
+Note: Due to the large size of the dataset and computational requirements, running the models on Google Colab is recommended for better performance.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
