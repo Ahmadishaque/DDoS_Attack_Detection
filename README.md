@@ -143,7 +143,7 @@ The project utilizes the CICIDS2017 dataset, which contains:
 ### Installation Steps
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/ddos-detection-framework.git
+git clone https://github.com/Ahmadishaque/ddos-detection-framework.git
 cd ddos-detection-framework
 ```
 
