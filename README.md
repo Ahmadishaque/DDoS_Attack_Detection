@@ -100,15 +100,18 @@ The project utilizes the CICIDS2017 dataset, which contains:
     ├── preprocessing/
     │   └── preprocessing.ipynb
     │
-    └── models/
-        ├── ann.ipynb
-        ├── cnn.ipynb
-        ├── decision_tree.ipynb
-        ├── knn.ipynb
-        ├── logistic_regression.ipynb
-        ├── naive_bayes.ipynb
-        ├── random_forest.ipynb
-        └── svm.ipynb
+    ├── models/
+    │   ├── ann.ipynb
+    │   ├── cnn.ipynb
+    │   ├── decision_tree.ipynb
+    │   ├── knn.ipynb
+    │   ├── logistic_regression.ipynb
+    │   ├── naive_bayes.ipynb
+    │   ├── random_forest.ipynb
+    │   └── svm.ipynb
+    │
+    └── analysis/
+        └── evaluation.ipynb
 
 ```
 
